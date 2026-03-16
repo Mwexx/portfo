@@ -1,0 +1,53 @@
+==========================================
+PORTFOLIO BACKEND SETUP - QUICK GUIDE
+==========================================
+
+STEP 1: INSTALL DEPENDENCIES
+- Open terminal in THIS FOLDER (server/)
+- Run: npm install
+- Wait for installation to complete
+
+STEP 2: CONFIGURE EMAIL
+- Open .env file
+  * EMAIL_USER = stevenmwexx@gmail.com
+  * EMAIL_PASS = your 16-digit Gmail App Password (NO SPACES!)
+  * EMAIL_TO = stevenmwexx@gmail.com
+
+STEP 3: START SERVER
+- In terminal, run: npm start
+- You should see:
+  "✅ Portfolio backend running on port 3001"
+  "✅ Email server ready to send messages"
+
+STEP 4: TEST SERVER
+- Open browser: http://localhost:3001/api/health
+- Should see JSON message saying server is running
+
+STEP 5: CONNECT TO FRONTEND
+- Open public/script.js
+- Find the contact form code
+- Make sure URL is: 'http://localhost:3001/api/contact'
+
+STEP 6: TEST CONTACT FORM
+- Open public/index.html in browser
+- Fill contact form
+- Click "Send Message"
+- Check your email!
+
+TROUBLESHOOTING:
+❌ "Email failed to send"
+  → Check .env file has correct App Password (NO SPACES!)
+  → Make sure Gmail 2-Step Verification is ON
+  → Check terminal for error messages
+
+❌ "Cannot connect to server"
+  → Make sure server is running (npm start)
+  → Check port number matches in .env and script.js
+  → Check browser console for errors (F12)
+
+❌ "Port already in use"
+  → Change PORT=3001 to PORT=3002 in .env
+  → Update script.js to use new port
+
+NEVER UPLOAD .env TO GITHUB!
+Add to .gitignore (already done in this folder)

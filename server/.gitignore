@@ -1,0 +1,7 @@
+# 🔴 IMPORTANT: This prevents secrets from leaking to GitHub!
+node_modules/
+.env
+*.log
+.DS_Store
+.env.local
+.env.production
