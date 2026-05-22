@@ -90,28 +90,35 @@ function setupForm() {
     if (form) {
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             // Get form values
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
-            
+
             // Basic validation
             if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
                 alert('Please fill in all fields');
                 return;
             }
-            
+
             if (!validateEmail(email)) {
                 alert('Please enter a valid email address');
                 return;
             }
-            
-            // In a real implementation, you would send the form data to a server here
-            // For demo purposes, we'll just show a success message
-            alert(`Thank you for your message, ${name}! I'll get back to you soon.`);
-            
-            // Reset form
+
+            // Build WhatsApp message
+            const phone = '254104081145';
+            const waMessage =
+                `Hello, my name is ${encodeURIComponent(name)}.%0A` +
+                `Email: ${encodeURIComponent(email)}%0A` +
+                `Message: ${encodeURIComponent(message)}`;
+            const waUrl = `https://wa.me/${phone}?text=${waMessage}`;
+
+            // Open WhatsApp chat in new tab
+            window.open(waUrl, '_blank');
+
+            // Optionally reset form
             form.reset();
         });
     }
