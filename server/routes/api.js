@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const { validateContactForm } = require('../middleware/validation');
-const { sendContactEmail } = require('../utils/email');
+
+// Use WhatsApp sender instead of email
+const { sendWhatsAppMessage } = require('../utils/whatsapp');
 
 // Health check endpoint - test if server is running
 router.get('/health', (req, res) => {
@@ -16,25 +18,18 @@ router.get('/health', (req, res) => {
 router.post('/contact', validateContactForm, async (req, res) => {
   try {
     const { name, email, message } = req.body;
-    
-    // Send email with form data
-    await sendContactEmail({ name, email, message });
-    
-    // Success response to frontend
+    // Send WhatsApp message with form data
+    await sendWhatsAppMessage({ name, email, message });
     res.status(200).json({
       success: true,
-      message: 'Message sent successfully! I\'ll get back to you soon.'
+      message: 'Message sent successfully via WhatsApp! I\'ll get back to you soon.'
     });
-    
-    console.log(`✅ New message from: ${name} <${email}>`);
-    
+    console.log(`✅ WhatsApp message sent from: ${name} <${email}>`);
   } catch (error) {
     console.error('Contact form error:', error.message);
-    
-    // Send helpful error to frontend
     res.status(500).json({
       success: false,
-      error: error.message || 'Failed to send message. Please try again later.'
+      error: error.message || 'Failed to send WhatsApp message. Please try again later.'
     });
   }
 });
