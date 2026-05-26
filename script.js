@@ -69,34 +69,157 @@ if (cvDownloadBtn && cvSheet) {
     cvDownloadBtn.addEventListener('click', async () => {
         const originalLabel = cvDownloadBtn.innerHTML;
 
-        if (window.html2pdf) {
-            cvDownloadBtn.disabled = true;
-            cvDownloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing PDF';
+        cvDownloadBtn.disabled = true;
+        cvDownloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing PDF';
 
-            try {
-                const options = {
-                    margin: 0.3,
-                    filename: 'Steven_Mwendwa_CV.pdf',
-                    image: { type: 'jpeg', quality: 0.98 },
-                    html2canvas: {
-                        scale: 2,
-                        useCORS: true,
-                        backgroundColor: '#f7f8fb'
-                    },
-                    jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
-                    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-                };
+        try {
+            const jsPdfNamespace = window.jspdf;
+            const JsPdfCtor = jsPdfNamespace && jsPdfNamespace.jsPDF;
 
-                await window.html2pdf().set(options).from(cvSheet).save();
-            } catch (error) {
-                console.error('CV PDF generation failed:', error);
+            if (!JsPdfCtor) {
                 window.print();
-            } finally {
-                cvDownloadBtn.disabled = false;
-                cvDownloadBtn.innerHTML = originalLabel;
+                return;
             }
-        } else {
+
+            const doc = new JsPdfCtor({ unit: 'mm', format: 'a4', orientation: 'portrait' });
+            const pageWidth = doc.internal.pageSize.getWidth();
+            const pageHeight = doc.internal.pageSize.getHeight();
+            const margin = 16;
+            const contentWidth = pageWidth - margin * 2;
+            const lineHeight = 6;
+            const sectionGap = 4;
+            const leftColumnWidth = 63;
+            const rightColumnWidth = contentWidth - leftColumnWidth - 8;
+            let cursorY = 18;
+
+            const ensurePageSpace = (requiredHeight) => {
+                if (cursorY + requiredHeight > pageHeight - margin) {
+                    doc.addPage();
+                    cursorY = margin + 2;
+                }
+            };
+
+            const writeHeading = (text) => {
+                ensurePageSpace(14);
+                doc.setFont('helvetica', 'bold');
+                doc.setFontSize(18);
+                doc.setTextColor(15, 23, 42);
+                doc.text(text, margin, cursorY);
+                cursorY += 7;
+            };
+
+            const writeSubheading = (text) => {
+                doc.setFont('helvetica', 'bold');
+                doc.setFontSize(10);
+                doc.setTextColor(26, 188, 156);
+                doc.text(text.toUpperCase(), margin, cursorY);
+                cursorY += 5;
+            };
+
+            const writeBody = (text, width = contentWidth, options = {}) => {
+                doc.setFont('helvetica', options.bold ? 'bold' : 'normal');
+                doc.setFontSize(options.size || 10);
+                doc.setTextColor(options.color ? options.color[0] : 51, options.color ? options.color[1] : 65, options.color ? options.color[2] : 85);
+                const lines = doc.splitTextToSize(text, width);
+                ensurePageSpace(lines.length * lineHeight + 2);
+                doc.text(lines, options.x || margin, cursorY);
+                cursorY += lines.length * lineHeight;
+            };
+
+            const writeDivider = () => {
+                ensurePageSpace(4);
+                doc.setDrawColor(219, 234, 254);
+                doc.setLineWidth(0.4);
+                doc.line(margin, cursorY, pageWidth - margin, cursorY);
+                cursorY += 6;
+            };
+
+            writeSubheading('Client-ready resume');
+            writeHeading('Steven Mwendwa');
+            writeBody('Tech & Digital Solutions Specialist', contentWidth, { bold: true, size: 12, color: [52, 152, 219] });
+            writeBody('Email: stevenmwexx@gmail.com   |   Phone: +254 104 081 145   |   Nakuru, Kenya', contentWidth, { size: 9.5 });
+            writeBody('Open to freelance and collaboration opportunities', contentWidth, { bold: true, size: 10 });
+            writeDivider();
+
+            const renderTwoColumnBlock = (title, leftLines, rightLines) => {
+                const leftText = doc.splitTextToSize(leftLines.join(' '), leftColumnWidth);
+                const rightText = doc.splitTextToSize(rightLines.join(' '), rightColumnWidth);
+                const blockHeight = Math.max(leftText.length, rightText.length) * lineHeight + 10;
+                ensurePageSpace(blockHeight);
+
+                const startY = cursorY;
+
+                doc.setFont('helvetica', 'bold');
+                doc.setFontSize(11);
+                doc.setTextColor(15, 23, 42);
+                doc.text(title, margin, cursorY);
+                cursorY += 6;
+
+                doc.setFont('helvetica', 'bold');
+                doc.setFontSize(10);
+                doc.setTextColor(26, 188, 156);
+                doc.text('Highlights', margin, cursorY);
+                doc.text('Details', margin + leftColumnWidth + 8, cursorY);
+                cursorY += 4;
+
+                doc.setFont('helvetica', 'normal');
+                doc.setFontSize(9.5);
+                doc.setTextColor(51, 65, 85);
+                doc.text(leftText, margin, cursorY);
+                doc.text(rightText, margin + leftColumnWidth + 8, cursorY);
+                cursorY = startY + blockHeight;
+                cursorY += 2;
+            };
+
+            writeSubheading('Professional summary');
+            writeBody(
+                'Tech-focused creative specialist with hands-on experience building responsive websites, improving digital workflows, and turning ideas into polished online experiences. I combine clean front-end development, practical automation thinking, and client-friendly communication to deliver work that is easy to trust, easy to use, and easy to scale.',
+                contentWidth
+            );
+            writeDivider();
+
+            writeSubheading('Core strengths');
+            writeBody('Web Development, Automation, Database Management, Digital Marketing, UI / UX Thinking, Problem Solving', contentWidth);
+
+            writeSubheading('Tools and platforms');
+            writeBody('React, Node.js, MongoDB, Next.js, Python, Excel / Google Sheets, Git, HTML, CSS, JavaScript, Chart.js', contentWidth);
+
+            writeSubheading('Selected project experience');
+            renderTwoColumnBlock(
+                'Joyep',
+                ['Web app', 'Productivity'],
+                ['A clean productivity platform designed to help users stay organized and move through tasks with less friction.']
+            );
+            renderTwoColumnBlock(
+                'Finance Tracker',
+                ['Finance', 'Personal management'],
+                ['An intuitive dashboard for monitoring expenses, tracking budgets, and visualizing spending patterns clearly.']
+            );
+            renderTwoColumnBlock(
+                'Muse Cosmetics Kenya',
+                ['E-commerce', 'Beauty'],
+                ['A modern storefront experience that supports product discovery, a polished brand feel, and smooth customer interaction.']
+            );
+
+            writeSubheading('Education');
+            writeBody('Bachelor of Science in Computer Science', contentWidth, { bold: true });
+            writeBody('University of Embu, Kenya', contentWidth);
+
+            writeSubheading('Certifications');
+            writeBody('Google Data Analytics Professional Certificate', contentWidth);
+            writeBody('Microsoft Azure Fundamentals (AZ-900)', contentWidth);
+            writeBody('HubSpot Content Marketing Certification', contentWidth);
+
+            writeSubheading('What clients get');
+            writeBody('Strong attention to detail, fast communication, reliable delivery, and a focus on solutions that look professional and work well across devices.', contentWidth);
+
+            doc.save('Steven_Mwendwa_CV.pdf');
+        } catch (error) {
+            console.error('CV PDF generation failed:', error);
             window.print();
+        } finally {
+            cvDownloadBtn.disabled = false;
+            cvDownloadBtn.innerHTML = originalLabel;
         }
     });
 }
