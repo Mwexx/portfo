@@ -4,6 +4,8 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const navItems = document.querySelectorAll('.nav-link');
 const backToTopBtn = document.getElementById('back-to-top');
+const cvDownloadBtn = document.getElementById('cv-download');
+const cvSheet = document.getElementById('cv-sheet');
 const progressBars = document.querySelectorAll('.progress');
 const form = document.getElementById('inquiry-form');
 
@@ -61,6 +63,43 @@ backToTopBtn.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+
+// Download the CV as a PDF
+if (cvDownloadBtn && cvSheet) {
+    cvDownloadBtn.addEventListener('click', async () => {
+        const originalLabel = cvDownloadBtn.innerHTML;
+
+        if (window.html2pdf) {
+            cvDownloadBtn.disabled = true;
+            cvDownloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Preparing PDF';
+
+            try {
+                const options = {
+                    margin: 0.3,
+                    filename: 'Steven_Mwendwa_CV.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: {
+                        scale: 2,
+                        useCORS: true,
+                        backgroundColor: '#f7f8fb'
+                    },
+                    jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
+                    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+                };
+
+                await window.html2pdf().set(options).from(cvSheet).save();
+            } catch (error) {
+                console.error('CV PDF generation failed:', error);
+                window.print();
+            } finally {
+                cvDownloadBtn.disabled = false;
+                cvDownloadBtn.innerHTML = originalLabel;
+            }
+        } else {
+            window.print();
+        }
+    });
+}
 
 // Initialize progress bars with animation
 function initProgressBars() {
