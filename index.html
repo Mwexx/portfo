@@ -3,487 +3,422 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio of a tech specialist showcasing skills in web development, automation, and digital solutions">
+    <meta name="description" content="Professional portfolio of Steven Mwendwa - Tech & Digital Solutions Specialist">
     <title>Steven Mwendwa | Tech & Digital Solutions Specialist</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <span class="logo-accent">S</span>Mwendwa
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#learning" class="nav-link">Learning</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#cv" class="nav-link">CV</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-    </nav>
+    <!-- Digital Book Container -->
+    <div class="book-container">
+        <!-- Book Wrapper -->
+        <div class="book-wrapper" role="main">
+            <!-- Book Pages -->
+            <div class="book-pages">
+                <!-- PAGE 1: COVER -->
+                <div class="book-page cover-page" data-page="1">
+                    <div class="page-content cover-content">
+                        <div class="cover-spacer"></div>
+                        <div class="cover-main">
+                            <div class="cover-profile">
+                                <img src="me.jpg" alt="Steven Mwendwa" class="cover-image">
+                            </div>
+                            <h1 class="cover-name">Steven Mwendwa</h1>
+                            <h2 class="cover-title">Tech & Digital Solutions Specialist</h2>
+                            <p class="cover-tagline">Crafting Elegant Digital Solutions</p>
+                        </div>
+                        <div class="cover-footer">
+                            <button class="btn-open-book" aria-label="Open Portfolio">OPEN PORTFOLIO</button>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Steven Mwendwa</h1>
-                <h2 class="hero-subtitle">Aspiring Software Engineer | Tech & Digital Solutions Specialist</h2>
-                <p class="hero-description">I craft elegant digital solutions that solve real-world problems. Currently expanding my expertise in Python development and automation systems to deliver efficient, scalable technology solutions.</p>
-                <div class="hero-buttons">
-                    <a href="#cv" class="btn btn-primary">View CV</a>
-                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                <!-- PAGE 2: ABOUT ME -->
+                <div class="book-page" data-page="2">
+                    <div class="page-header">
+                        <h2>About Me</h2>
+                    </div>
+                    <div class="page-content">
+                        <p>Hello! I'm Steven Mwendwa, a passionate technology enthusiast dedicated to creating innovative digital solutions. With a strong foundation in various technical domains, I approach every challenge with analytical thinking and creative problem-solving skills.</p>
+                        <p>My journey in technology began with a fascination for how systems work and has evolved into a commitment to developing efficient, user-centered solutions. I believe that technology should simplify complexity and empower users.</p>
+                        <p>Currently, I'm deepening my expertise in <strong>Python programming and automation systems</strong>, focusing on creating scripts and tools that streamline workflows and eliminate repetitive tasks. This learning journey is preparing me to deliver more robust and intelligent solutions to complex business challenges.</p>
+                        <p>When I'm not coding or designing, you can find me exploring new technologies, contributing to open-source projects, or mentoring aspiring developers. I'm always excited to connect with like-minded professionals and explore collaborative opportunities.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="hero-image">
-                <div class="profile-container">
-                    <div class="profile-border"></div>
-                    <img src="me.jpg" alt="Steven Mwendwa" class="profile-img">
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="about-content">
-                <p>Hello! I'm Steven Mwendwa, a passionate technology enthusiast dedicated to creating innovative digital solutions. With a strong foundation in various technical domains, I approach every challenge with analytical thinking and creative problem-solving skills.</p>
-                <p>My journey in technology began with a fascination for how systems work and has evolved into a commitment to developing efficient, user-centered solutions. I believe that technology should simplify complexity and empower users.</p>
-                <p>Currently, I'm deepening my expertise in <strong>Python programming and automation systems</strong>, focusing on creating scripts and tools that streamline workflows and eliminate repetitive tasks. This learning journey is preparing me to deliver more robust and intelligent solutions to complex business challenges.</p>
-                <p>When I'm not coding or designing, you can find me exploring new technologies, contributing to open-source projects, or mentoring aspiring developers. I'm always excited to connect with like-minded professionals and explore collaborative opportunities.</p>
-            </div>
-        </div>
-    </section>
+                <!-- PAGE 3: SKILLS - TECHNICAL -->
+                <div class="book-page" data-page="3">
+                    <div class="page-header">
+                        <h2>Technical Skills</h2>
+                    </div>
+                    <div class="page-content">
+                        <div class="skills-grid-book">
+                            <div class="skill-item-book">
+                                <div class="skill-icon-book">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h4>Web Development</h4>
+                                <p>Building responsive, user-friendly websites and applications</p>
+                            </div>
+                            <div class="skill-item-book">
+                                <div class="skill-icon-book">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h4>Database Management</h4>
+                                <p>Designing and optimizing database structures and queries</p>
+                            </div>
+                            <div class="skill-item-book">
+                                <div class="skill-icon-book">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <h4>Automation</h4>
+                                <p>Creating scripts to streamline workflows and eliminate repetitive tasks</p>
+                            </div>
+                            <div class="skill-item-book">
+                                <div class="skill-icon-book">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h4>System Analysis</h4>
+                                <p>Evaluating systems to improve efficiency and solve complex problems</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">My Skills</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">A comprehensive overview of my technical and professional capabilities</p>
-            </div>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Technical Skills</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <i class="fas fa-code"></i>
+                <!-- PAGE 4: SKILLS - PROFESSIONAL -->
+                <div class="book-page" data-page="4">
+                    <div class="page-header">
+                        <h2>Professional Skills</h2>
+                    </div>
+                    <div class="page-content">
+                        <div class="skills-grid-book">
+                            <div class="skill-item-book">
+                                <div class="skill-icon-book">
+                                    <i class="fas fa-calculator"></i>
+                                </div>
+                                <h4>Spreadsheet Management</h4>
+                                <p>Advanced Excel/Sheets for data analysis and reporting</p>
                             </div>
-                            <h4>Web Development</h4>
-                            <p>Building responsive, user-friendly websites and applications</p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <i class="fas fa-database"></i>
+                            <div class="skill-item-book">
+                                <div class="skill-icon-book">
+                                    <i class="fas fa-palette"></i>
+                                </div>
+                                <h4>Graphic Design</h4>
+                                <p>Creating compelling visual content and marketing materials</p>
                             </div>
-                            <h4>Database Management</h4>
-                            <p>Designing and optimizing database structures and queries</p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <i class="fas fa-robot"></i>
+                            <div class="skill-item-book">
+                                <div class="skill-icon-book">
+                                    <i class="fas fa-bullhorn"></i>
+                                </div>
+                                <h4>Digital Marketing</h4>
+                                <p>Developing and executing effective online marketing strategies</p>
                             </div>
-                            <h4>Automation</h4>
-                            <p>Creating scripts to streamline workflows and eliminate repetitive tasks</p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <i class="fas fa-chart-line"></i>
+                            <div class="skill-item-book">
+                                <div class="skill-icon-book">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h4>Problem Solving</h4>
+                                <p>Methodical approach to identifying and resolving complex challenges</p>
                             </div>
-                            <h4>System Analysis</h4>
-                            <p>Evaluating systems to improve efficiency and solve complex problems</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="skill-category">
-                    <h3>Professional Skills</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <i class="fas fa-calculator"></i>
-                            </div>
-                            <h4>Spreadsheet Management</h4>
-                            <p>Advanced Excel/Sheets for data analysis and reporting</p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <i class="fas fa-palette"></i>
-                            </div>
-                            <h4>Graphic Design</h4>
-                            <p>Creating compelling visual content and marketing materials</p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <i class="fas fa-bullhorn"></i>
-                            </div>
-                            <h4>Digital Marketing</h4>
-                            <p>Developing and executing effective online marketing strategies</p>
-                        </div>
-                        <div class="skill-card">
-                            <div class="skill-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <h4>Problem Solving</h4>
-                            <p>Methodical approach to identifying and resolving complex challenges</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Learning Section -->
-    <section id="learning" class="learning">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Current Learning Journey</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">Expanding my expertise to deliver more advanced solutions</p>
-            </div>
-            <div class="learning-container">
-                <div class="learning-card">
-                    <div class="learning-icon">
-                        <i class="fas fa-python"></i>
+                <!-- PAGE 5: LEARNING JOURNEY -->
+                <div class="book-page" data-page="5">
+                    <div class="page-header">
+                        <h2>Learning Journey</h2>
                     </div>
-                    <h3>Python Programming</h3>
-                    <p>Mastering core concepts, data structures, algorithms, and object-oriented programming to build robust applications and scripts.</p>
-                    <div class="learning-progress">
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 75%"></div>
+                    <div class="page-content">
+                        <div class="learning-grid-book">
+                            <div class="learning-item-book">
+                                <div class="learning-icon-book">
+                                    <i class="fas fa-python"></i>
+                                </div>
+                                <h3>Python Programming</h3>
+                                <p>Mastering core concepts, data structures, algorithms, and object-oriented programming to build robust applications and scripts.</p>
+                                <div class="progress-bar-book">
+                                    <div class="progress" style="width: 75%"></div>
+                                </div>
+                                <span class="progress-text">75% Complete</span>
+                            </div>
+                            <div class="learning-item-book">
+                                <div class="learning-icon-book">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h3>Automation Systems</h3>
+                                <p>Developing skills in creating automated workflows, web scraping, task scheduling, and integration of different systems.</p>
+                                <div class="progress-bar-book">
+                                    <div class="progress" style="width: 65%"></div>
+                                </div>
+                                <span class="progress-text">65% Complete</span>
+                            </div>
+                            <div class="learning-item-book">
+                                <div class="learning-icon-book">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <h3>Future Goals</h3>
+                                <p>Working toward becoming a proficient software engineer specializing in automation solutions and backend development. My goal is to create intelligent systems that solve complex business problems.</p>
+                            </div>
                         </div>
-                        <span class="progress-text">75% Complete</span>
                     </div>
                 </div>
-                <div class="learning-card">
-                    <div class="learning-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Automation Systems</h3>
-                    <p>Developing skills in creating automated workflows, web scraping, task scheduling, and integration of different systems to improve efficiency.</p>
-                    <div class="learning-progress">
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 65%"></div>
-                        </div>
-                        <span class="progress-text">65% Complete</span>
-                    </div>
-                </div>
-                <div class="learning-card">
-                    <div class="learning-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Future Goals</h3>
-                    <p>I'm working toward becoming a proficient software engineer specializing in automation solutions and backend development. My goal is to create intelligent systems that solve complex business problems and drive innovation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">A selection of my work showcasing diverse skills and problem-solving approaches</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <a href="https://mwexx.github.io/Joyep/" class="project-link" target="_blank" title="View on GitHub"><i class="fab fa-github"></i></a>
-                            <a href="https://joyep.vercel.app/" class="project-link" target="_blank" title="View Live on Vercel"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
+                <!-- PAGE 6: FEATURED PROJECTS -->
+                <div class="book-page" data-page="6">
+                    <div class="page-header">
+                        <h2>Featured Projects</h2>
                     </div>
-                    <div class="project-content">
-                        <h3>Joyep</h3>
-                        <p class="project-category">Web App | Productivity</p>
-                        <p>A productivity web application designed to help the organization reach a variety of customers. Features a clean UI and seamless user experience.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
+                    <div class="page-content">
+                        <div class="projects-grid-book">
+                            <div class="project-item-book">
+                                <h3>Joyep</h3>
+                                <p class="project-category">Web App | Productivity</p>
+                                <p>A productivity web application designed to help users stay organized and move through tasks with less friction.</p>
+                                <div class="project-tech-book">
+                                    <span>React</span>
+                                    <span>Node.js</span>
+                                    <span>MongoDB</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://mwexx.github.io/Joyep/" target="_blank" title="View on GitHub"><i class="fab fa-github"></i></a>
+                                    <a href="https://joyep.vercel.app/" target="_blank" title="View Live"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="project-item-book">
+                                <h3>Finance Tracker</h3>
+                                <p class="project-category">Finance | Personal Management</p>
+                                <p>An intuitive dashboard for monitoring expenses, tracking budgets, and visualizing spending patterns clearly.</p>
+                                <div class="project-tech-book">
+                                    <span>Next.js</span>
+                                    <span>MongoDB</span>
+                                    <span>Chart.js</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://mwexx.github.io/Finance_Tracker/" target="_blank" title="View on GitHub"><i class="fab fa-github"></i></a>
+                                    <a href="https://finance-tracker-nine-bice.vercel.app/" target="_blank" title="View Live"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <div class="project-item-book">
+                                <h3>Muse Cosmetics Kenya</h3>
+                                <p class="project-category">E-commerce | Beauty</p>
+                                <p>A modern storefront experience that supports product discovery, a polished brand feel, and smooth customer interaction.</p>
+                                <div class="project-tech-book">
+                                    <span>React</span>
+                                    <span>Node.js</span>
+                                    <span>MongoDB</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://mwexx.github.io/musecosmeticskenya/" target="_blank" title="View on GitHub"><i class="fab fa-github"></i></a>
+                                    <a href="https://musecosmeticskenya.vercel.app/" target="_blank" title="View Live"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <a href="https://mwexx.github.io/Finance_Tracker/" class="project-link" target="_blank" title="View on GitHub"><i class="fab fa-github"></i></a>
-                            <a href="https://finance-tracker-nine-bice.vercel.app/" class="project-link" target="_blank" title="View Live on Vercel"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
+
+                <!-- PAGE 7: PROFESSIONAL SUMMARY -->
+                <div class="book-page" data-page="7">
+                    <div class="page-header">
+                        <h2>Professional Summary</h2>
                     </div>
-                    <div class="project-content">
-                        <h3>Finance Tracker</h3>
-                        <p class="project-category">Finance | Personal Management</p>
-                        <p>An intuitive finance tracking tool that enables users to monitor expenses, set budgets, and visualize spending trends.</p>
-                        <div class="project-tech">
-                            <span>Next.js</span>
-                            <span>MongoDB</span>
-                            <span>Chart.js</span>
+                    <div class="page-content">
+                        <div class="cv-summary-book">
+                            <p><strong>Tech-focused creative specialist</strong> with hands-on experience building responsive websites, improving digital workflows, and turning ideas into polished online experiences.</p>
+                            <p>I combine <strong>clean front-end development</strong>, <strong>practical automation thinking</strong>, and <strong>client-friendly communication</strong> to deliver work that is easy to trust, easy to use, and easy to scale.</p>
+                            
+                            <h3>Core Strengths</h3>
+                            <div class="strengths-list-book">
+                                <div>Web Development</div>
+                                <div>Automation</div>
+                                <div>Database Management</div>
+                                <div>Digital Marketing</div>
+                                <div>UI / UX Thinking</div>
+                                <div>Problem Solving</div>
+                            </div>
+
+                            <h3>Tools & Platforms</h3>
+                            <p>React, Node.js, MongoDB, Next.js, Python, Excel / Google Sheets, Git, HTML, CSS, JavaScript, Chart.js</p>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <a href="https://mwexx.github.io/musecosmeticskenya/" class="project-link" target="_blank" title="View on GitHub"><i class="fab fa-github"></i></a>
-                            <a href="https://musecosmeticskenya.vercel.app/" class="project-link" target="_blank" title="View Live on Vercel"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Muse Cosmetics Kenya</h3>
-                        <p class="project-category">E-commerce | Beauty</p>
-                        <p>A modern e-commerce platform for selling beauty products in Kenya, featuring a user-friendly interface and seamless payment integration.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>git
-                        </div>
-                    </div>
-            </div>
-            <div class="projects-note">
-                
-            </div>
-        </div>
-    </section>
 
-    <!-- CV Section -->
-    <section id="cv" class="cv-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Curriculum Vitae</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">A refined, client-facing CV with a downloadable PDF version for easy sharing</p>
-            </div>
-            <div class="cv-container">
-                <div class="cv-preview" id="cv-sheet">
-                    <div class="cv-header-panel">
-                        <div>
-                            <p class="cv-kicker">Client-ready resume</p>
-                            <h3>Steven Mwendwa</h3>
-                            <p class="cv-title">Tech & Digital Solutions Specialist</p>
-                        </div>
-                        <div class="cv-badge">Open to freelance and collaboration opportunities</div>
+                <!-- PAGE 8: EDUCATION & CERTIFICATIONS -->
+                <div class="book-page" data-page="8">
+                    <div class="page-header">
+                        <h2>Background & Credentials</h2>
                     </div>
+                    <div class="page-content">
+                        <div class="education-book">
+                            <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                            <div class="education-item">
+                                <p class="degree"><strong>Bachelor of Science in Computer Science</strong></p>
+                                <p class="university">University of Embu, Kenya</p>
+                            </div>
 
-                    <div class="cv-grid">
-                        <aside class="cv-sidebar">
-                            <div class="cv-block">
-                                <h4><i class="fas fa-address-card"></i> Contact</h4>
-                                <div class="cv-contact">
-                                    <p><i class="fas fa-envelope"></i> stevenmwexx@gmail.com</p>
-                                    <p><i class="fas fa-phone"></i> +254 104 081 145</p>
-                                    <p><i class="fas fa-map-marker-alt"></i> Nakuru, Kenya</p>
+                            <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                            <div class="certification-item">
+                                <p><strong>Google Data Analytics Professional Certificate</strong></p>
+                            </div>
+                            <div class="certification-item">
+                                <p><strong>Microsoft Azure Fundamentals (AZ-900)</strong></p>
+                            </div>
+                            <div class="certification-item">
+                                <p><strong>HubSpot Content Marketing Certification</strong></p>
+                            </div>
+
+                            <h3><i class="fas fa-check-circle"></i> What Clients Get</h3>
+                            <p>Strong attention to detail, fast communication, reliable delivery, and a focus on solutions that look professional and work well across devices.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PAGE 9: CONTACT INFORMATION -->
+                <div class="book-page" data-page="9">
+                    <div class="page-header">
+                        <h2>Get In Touch</h2>
+                    </div>
+                    <div class="page-content">
+                        <div class="contact-grid-book">
+                            <div class="contact-info-book">
+                                <h3>Contact Details</h3>
+                                <div class="contact-item-book">
+                                    <i class="fas fa-phone"></i>
+                                    <div>
+                                        <p class="label">Phone</p>
+                                        <p>+254 104 081 145</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item-book">
+                                    <i class="fas fa-envelope"></i>
+                                    <div>
+                                        <p class="label">Email</p>
+                                        <p><a href="mailto:stevenmwexx@gmail.com">stevenmwexx@gmail.com</a></p>
+                                    </div>
+                                </div>
+                                <div class="contact-item-book">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <p class="label">Location</p>
+                                        <p>Nakuru, Kenya</p>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="cv-block">
-                                <h4><i class="fas fa-bolt"></i> Core Strengths</h4>
-                                <div class="cv-strengths">
-                                    <span class="cv-chip">Web Development</span>
-                                    <span class="cv-chip">Automation</span>
-                                    <span class="cv-chip">Database Management</span>
-                                    <span class="cv-chip">Digital Marketing</span>
-                                    <span class="cv-chip">UI / UX Thinking</span>
-                                    <span class="cv-chip">Problem Solving</span>
-                                </div>
+                            <div class="contact-form-book">
+                                <h3>Send a Message</h3>
+                                <form id="inquiry-form">
+                                    <div class="form-group">
+                                        <input type="text" id="name" name="name" placeholder="Full Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" id="email" name="email" placeholder="Email Address" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send</button>
+                                </form>
                             </div>
-
-                            <div class="cv-block">
-                                <h4><i class="fas fa-tools"></i> Tools & Platforms</h4>
-                                <p>React, Node.js, MongoDB, Next.js, Python, Excel / Google Sheets, Git, HTML, CSS, JavaScript, Chart.js</p>
-                            </div>
-
-                            <div class="cv-block">
-                                <h4><i class="fas fa-certificate"></i> Certifications</h4>
-                                <p>Google Data Analytics Professional Certificate<br>Microsoft Azure Fundamentals (AZ-900)<br>HubSpot Content Marketing Certification</p>
-                            </div>
-                        </aside>
-
-                        <main class="cv-main">
-                            <div class="cv-block">
-                                <h4><i class="fas fa-briefcase"></i> Professional Summary</h4>
-                                <p>Tech-focused creative specialist with hands-on experience building responsive websites, improving digital workflows, and turning ideas into polished online experiences. I combine clean front-end development, practical automation thinking, and client-friendly communication to deliver work that is easy to trust, easy to use, and easy to scale.</p>
-                            </div>
-
-                            <div class="cv-block">
-                                <h4><i class="fas fa-star"></i> Selected Project Experience</h4>
-                                <div class="cv-project-list">
-                                    <article class="cv-project-item">
-                                        <h5>Joyep</h5>
-                                        <p class="cv-project-meta">Web app | Productivity</p>
-                                        <p>A clean productivity platform designed to help users stay organized and move through tasks with less friction.</p>
-                                    </article>
-                                    <article class="cv-project-item">
-                                        <h5>Finance Tracker</h5>
-                                        <p class="cv-project-meta">Finance | Personal management</p>
-                                        <p>An intuitive dashboard for monitoring expenses, tracking budgets, and visualizing spending patterns clearly.</p>
-                                    </article>
-                                    <article class="cv-project-item">
-                                        <h5>Muse Cosmetics Kenya</h5>
-                                        <p class="cv-project-meta">E-commerce | Beauty</p>
-                                        <p>A modern storefront experience that supports product discovery, a polished brand feel, and smooth customer interaction.</p>
-                                    </article>
-                                </div>
-                            </div>
-
-                            <div class="cv-block cv-block-grid">
-                                <div>
-                                    <h4><i class="fas fa-graduation-cap"></i> Education</h4>
-                                    <p><strong>Bachelor of Science in Computer Science</strong><br>University of Embu, Kenya</p>
-                                </div>
-                                <div>
-                                    <h4><i class="fas fa-bullseye"></i> What Clients Get</h4>
-                                    <p>Strong attention to detail, fast communication, reliable delivery, and a focus on solutions that look professional and work well across devices.</p>
-                                </div>
-                            </div>
-                        </main>
+                        </div>
                     </div>
                 </div>
-                <div class="cv-actions">
-                    <button id="cv-download" type="button" class="btn btn-primary btn-large"><i class="fas fa-download"></i> Download PDF CV</button>
-                    <a href="#contact" class="btn btn-secondary btn-large">Hire Me</a>
-                
-                    <div class="cv-highlights">
-                        <h3>Why Clients Trust This CV</h3>
-                        <ul>
-                            <li>Clear positioning around client value and delivery</li>
-                            <li>Balanced mix of technical, creative, and business skills</li>
-                            <li>Project-backed proof of practical experience</li>
-                            <li>Downloadable PDF format for easy sharing</li>
-                            <li>Modern layout that reads well on desktop and mobile</li>
-                        </ul>
+
+                <!-- PAGE 10: SOCIAL & CONNECT -->
+                <div class="book-page" data-page="10">
+                    <div class="page-header">
+                        <h2>Connect With Me</h2>
                     </div>
+                    <div class="page-content">
+                        <div class="social-section-book">
+                            <p class="social-intro">Follow my journey and stay connected across platforms</p>
+                            <div class="social-icons-grid">
+                                <a href="https://www.linkedin.com/in/steven-mwendwa" target="_blank" rel="noopener" class="social-card">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://github.com/Mwexx" target="_blank" rel="noopener" class="social-card">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="https://twitter.com/c.o.d.e.r" target="_blank" rel="noopener" class="social-card">
+                                    <i class="fab fa-twitter"></i>
+                                    <span>Twitter</span>
+                                </a>
+                                <a href="https://www.instagram.com/c.o.d.e.rr" target="_blank" rel="noopener" class="social-card">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                                <a href="https://tiktok.com/@m_tech42" target="_blank" rel="noopener" class="social-card">
+                                    <i class="fab fa-tiktok"></i>
+                                    <span>TikTok</span>
+                                </a>
+                            </div>
+
+                            <div class="cv-download-section">
+                                <h3>Download My CV</h3>
+                                <button id="cv-download" type="button" class="btn btn-primary"><i class="fas fa-download"></i> Download PDF CV</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PAGE 11: BACK COVER -->
+                <div class="book-page back-cover-page" data-page="11">
+                    <div class="page-content back-cover-content">
+                        <div class="back-cover-main">
+                            <h2>Thank You</h2>
+                            <p>Thank you for taking the time to explore my work and story.</p>
+                            <p>I'm always excited to discuss new opportunities, collaborate on interesting projects, or simply connect with fellow technology enthusiasts.</p>
+                            <p class="closing-tagline">Let's build something amazing together.</p>
+                        </div>
+                        <div class="back-cover-footer">
+                            <p>&copy; 2026 STEVEN MWENDWA</p>
+                            <p>Tech & Digital Solutions Specialist</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Controls -->
+            <div class="book-navigation">
+                <!-- Previous Button -->
+                <button class="nav-btn nav-prev" aria-label="Previous Page" id="prev-btn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <!-- Page Counter -->
+                <div class="page-counter">
+                    <span class="current-page">01</span> / <span class="total-pages">11</span>
+                </div>
+
+                <!-- Next Button -->
+                <button class="nav-btn nav-next" aria-label="Next Page" id="next-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Page Numbers Navigation -->
+            <div class="page-numbers-nav" role="navigation" aria-label="Page Navigation">
+                <div class="page-numbers-container">
+                    <button class="page-number active" data-page="1" aria-label="Go to Cover">01</button>
+                    <button class="page-number" data-page="2" aria-label="Go to About Me">02</button>
+                    <button class="page-number" data-page="3" aria-label="Go to Technical Skills">03</button>
+                    <button class="page-number" data-page="4" aria-label="Go to Professional Skills">04</button>
+                    <button class="page-number" data-page="5" aria-label="Go to Learning">05</button>
+                    <button class="page-number" data-page="6" aria-label="Go to Projects">06</button>
+                    <button class="page-number" data-page="7" aria-label="Go to Summary">07</button>
+                    <button class="page-number" data-page="8" aria-label="Go to Education">08</button>
+                    <button class="page-number" data-page="9" aria-label="Go to Contact">09</button>
+                    <button class="page-number" data-page="10" aria-label="Go to Social">10</button>
+                    <button class="page-number" data-page="11" aria-label="Go to Back Cover">11</button>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">Have a project in mind or want to discuss opportunities? Reach out!</p>
-            </div>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-phone contact-icon"></i>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+254 104 081 145</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope contact-icon"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>stevenmwexx@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt contact-icon"></i>
-                        <div>
-                            <h4>Location</h4>
-                            <p>Nakuru, Kenya</p>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <h4>Connect With Me</h4>
-                        <div class="social-icons">
-                            <a href="https://www.linkedin.com/in/steven-mwendwa" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://github.com/Mwexx" class="social-icon"><i class="fab fa-github"></i></a>
-                            <a href="https://twitter.com/c.o.d.e.r" class="social-icon"><i class="fab fa-twitter"></i></a>
-                            <a href="https://www.instagram.com/c.o.d.e.rr" class="social-icon"><i class="fab fa-instagram"></i></a>
-                            <a href="https://tiktok.com/@m_tech42" class="social-icon"><i class="fab fa-tiktok"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <form id="inquiry-form">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="logo-accent">S</span>Mwendwa
-                    <p>Tech & Digital Solutions Specialist</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact Info</h4>
-                    <p><i class="fas fa-envelope"></i> stevenmwexx@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> +254 104 081 145</p>
-                </div>
-                <div class="footer-social">
-                    <h4>Follow Me</h4>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/alex-morgan"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/Mwexx"><i class="fab fa-github"></i></a>
-                        <a href="https://twitter.com/c.o.d.e.r"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/c.o.d.e.rr"><i class="fab fa-instagram"></i></a>
-                        <a href="https://tiktok.com/@m_tech42"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 STEVEN MWENDWA. All Rights Reserved.</p>
-                <p>Designed & Developed with ❤️ for professional use</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
     <script src="script.js"></script>
 </body>
