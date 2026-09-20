@@ -255,7 +255,7 @@ class DigitalBookManager {
             writeSubheading('Client-ready resume');
             writeHeading('Steven Mwendwa');
             writeBody('Tech & Digital Solutions Specialist', contentWidth, { bold: true, size: 12, color: [52, 152, 219] });
-            writeBody('Email: stevenmwexx@gmail.com   |   Phone: +254 104 081 145   |   Nakuru, Kenya', contentWidth, { size: 9.5 });
+            writeBody('Email: stevenmwexx@gmail.com   |   Phone: +254 113 177 888   |   Nakuru, Kenya', contentWidth, { size: 9.5 });
             writeBody('Open to freelance and collaboration opportunities', contentWidth, { bold: true, size: 10 });
             writeDivider();
             
@@ -319,7 +319,7 @@ class DigitalBookManager {
         }
         
         // Send via WhatsApp
-        const phone = '254104081145';
+        const phone = '25413177888';
         const waMessage =
             `Hello, my name is ${encodeURIComponent(name)}.%0A` +
             `Email: ${encodeURIComponent(email)}%0A` +
