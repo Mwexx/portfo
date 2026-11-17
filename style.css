@@ -1611,6 +1611,33 @@ body {
     padding: 36px 50px 50px;
     overflow: visible;
     max-height: none;
+    color: var(--text-color);
+}
+
+.book-page .page-content p,
+.book-page .page-content li,
+.book-page .page-content label {
+    color: var(--text-color);
+}
+
+.book-page .page-content strong {
+    color: var(--primary-color);
+}
+
+.book-page .page-content a {
+    color: #1976b9;
+}
+
+.book-page .page-content input,
+.book-page .page-content textarea {
+    color: var(--text-color);
+    background: #ffffff;
+}
+
+.book-page .page-content input::placeholder,
+.book-page .page-content textarea::placeholder {
+    color: #64748b;
+    opacity: 1;
 }
 
 @keyframes home-enter {
