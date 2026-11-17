@@ -2,7 +2,7 @@
 class DigitalBookManager {
     constructor() {
         this.totalPages = 11;
-        this.currentPage = 1;
+        this.currentPage = 0;
         this.isAnimating = false;
         this.touchStartX = 0;
         this.touchEndX = 0;
@@ -20,6 +20,8 @@ class DigitalBookManager {
         this.pageNumbers = document.querySelectorAll('.page-number');
         this.currentPageDisplay = document.querySelector('.current-page');
         this.bookPages = document.querySelector('.book-pages');
+        this.homePage = document.querySelector('.home-page');
+        this.wrapper = document.querySelector('.book-wrapper');
         this.openBookBtn = document.querySelector('.btn-open-book');
         this.cvDownloadBtn = document.getElementById('cv-download');
         this.form = document.getElementById('inquiry-form');
@@ -35,6 +37,20 @@ class DigitalBookManager {
             btn.addEventListener('click', () => {
                 const pageNum = parseInt(btn.dataset.page);
                 this.goToPage(pageNum);
+            });
+        });
+
+        document.querySelectorAll('[data-page-link]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.goToPage(parseInt(link.dataset.pageLink));
+            });
+        });
+
+        document.querySelectorAll('[data-home-link]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                this.showHome();
             });
         });
         
@@ -62,8 +78,10 @@ class DigitalBookManager {
         if (this.form) {
             this.form.addEventListener('submit', (e) => this.handleFormSubmit(e));
         }
+
+        this.showHome();
     }
-    
+
     showPage(pageNum) {
         if (pageNum < 1 || pageNum > this.totalPages) return;
         
@@ -78,6 +96,9 @@ class DigitalBookManager {
                 page.classList.add('prev');
             }
         });
+
+        this.homePage.classList.remove('active');
+        this.wrapper.classList.remove('home-active');
         
         // Update page counter
         this.currentPageDisplay.textContent = String(pageNum).padStart(2, '0');
@@ -96,6 +117,18 @@ class DigitalBookManager {
         this.nextBtn.disabled = pageNum === this.totalPages;
         
         this.currentPage = pageNum;
+    }
+
+    showHome() {
+        this.pages.forEach(page => page.classList.remove('active', 'prev'));
+        this.homePage.classList.add('active');
+        this.wrapper.classList.add('home-active');
+        this.currentPage = 0;
+        this.pageNumbers.forEach(btn => btn.classList.remove('active'));
+        this.prevBtn.disabled = true;
+        this.nextBtn.disabled = true;
+        document.title = 'Steven Mwendwa | Tech & Digital Solutions Specialist';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
     
     playPageFlip() {
@@ -163,6 +196,8 @@ class DigitalBookManager {
     
     handlePageClick(e) {
         if (this.isAnimating) return;
+        if (e.target.closest('a, button, input, textarea, select')) return;
+        if (this.currentPage === 0) return;
         
         const rect = this.bookPages.getBoundingClientRect();
         const clickX = e.clientX - rect.left;
@@ -177,12 +212,7 @@ class DigitalBookManager {
     }
     
     playOpeningAnimation() {
-        // Cover page entrance animation
-        const coverPage = this.pages[0];
-        coverPage.style.animation = 'none';
-        setTimeout(() => {
-            coverPage.classList.add('active');
-        }, 100);
+        this.showHome();
     }
     
     downloadCV() {

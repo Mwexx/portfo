@@ -10,12 +10,123 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Digital Book Container -->
     <div class="book-container">
-        <!-- Book Wrapper -->
         <div class="book-wrapper" role="main">
-            <!-- Book Pages -->
+            <header class="site-topbar">
+                <a class="brand-mark" href="#" data-home-link aria-label="Return to homepage">
+                    <span class="brand-mark-icon">SM</span>
+                    <span>Steven Mwendwa</span>
+                </a>
+                <div class="topbar-actions">
+                    <span class="availability"><span></span> Available for opportunities</span>
+                    <a class="topbar-home-link" href="#" data-home-link><i class="fas fa-house"></i> Home</a>
+                </div>
+            </header>
+
             <div class="book-pages">
+                <section class="home-page" aria-labelledby="home-title">
+                    <div class="home-hero">
+                        <div class="hero-copy">
+                            <p class="eyebrow"><span></span> Tech & Digital Solutions Specialist</p>
+                            <h1 id="home-title">Thoughtful digital work<br><em>with a human touch.</em></h1>
+                            <p class="hero-description">I build responsive websites, practical automation systems, and polished digital experiences that help ideas move forward.</p>
+                            <div class="hero-actions">
+                                <a class="btn btn-primary" href="#projects" data-page-link="6">Explore my work <i class="fas fa-arrow-right"></i></a>
+                                <a class="btn btn-secondary" href="#contact" data-page-link="9">Let's connect</a>
+                            </div>
+                            <div class="hero-proof">
+                                <div class="proof-avatars"><span>W</span><span>A</span><span>D</span></div>
+                                <p><strong>Creative, reliable, curious.</strong><br>Making technology feel simpler.</p>
+                            </div>
+                        </div>
+                        <div class="hero-visual">
+                            <div class="hero-orbit orbit-one"></div>
+                            <div class="hero-orbit orbit-two"></div>
+                            <div class="hero-card">
+                                <div class="hero-card-top"><span>PORTFOLIO / 2026</span><i class="fas fa-sparkles"></i></div>
+                                <img src="me.jpg" alt="Steven Mwendwa" class="hero-image">
+                                <div class="hero-card-bottom"><strong>Steven Mwendwa</strong><span>Build. Improve. Repeat.</span></div>
+                            </div>
+                            <span class="floating-note note-one"><i class="fas fa-code"></i> Clean code</span>
+                            <span class="floating-note note-two"><i class="fas fa-bolt"></i> Smart systems</span>
+                        </div>
+                    </div>
+
+                    <div class="home-intro">
+                        <div>
+                            <p class="eyebrow">Explore the portfolio</p>
+                            <h2>Everything you need,<br><em>one click away.</em></h2>
+                        </div>
+                        <p>Browse my background, capabilities, selected projects, and ways to connect. Each space is designed to give you the right context quickly.</p>
+                    </div>
+
+                    <div class="home-grid" id="home-links">
+                        <a class="home-card home-card-featured" href="#about" data-page-link="2">
+                            <span class="card-icon"><i class="fas fa-user"></i></span>
+                            <span class="card-number">01</span>
+                            <h3>About me</h3>
+                            <p>My story, mindset, and the way I approach meaningful digital work.</p>
+                            <span class="card-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                        </a>
+                        <a class="home-card" href="#skills" data-page-link="3">
+                            <span class="card-icon"><i class="fas fa-layer-group"></i></span>
+                            <span class="card-number">02</span>
+                            <h3>Capabilities</h3>
+                            <p>Technical and professional skills for building better systems.</p>
+                            <span class="card-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                        </a>
+                        <a class="home-card" href="#professional-skills" data-page-link="4">
+                            <span class="card-icon"><i class="fas fa-briefcase"></i></span>
+                            <span class="card-number">03</span>
+                            <h3>Professional skills</h3>
+                            <p>Creative, analytical, and practical strengths I bring to every project.</p>
+                            <span class="card-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                        </a>
+                        <a class="home-card" href="#learning" data-page-link="5">
+                            <span class="card-icon"><i class="fas fa-compass"></i></span>
+                            <span class="card-number">04</span>
+                            <h3>Learning journey</h3>
+                            <p>What I am exploring now and where I am headed next.</p>
+                            <span class="card-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                        </a>
+                        <a class="home-card home-card-wide" href="#projects" data-page-link="6">
+                            <span class="card-icon"><i class="fas fa-rocket"></i></span>
+                            <span class="card-number">05</span>
+                            <h3>Featured projects</h3>
+                            <p>A closer look at products and experiences I have brought to life.</p>
+                            <span class="card-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                        </a>
+                        <a class="home-card" href="#background" data-page-link="8">
+                            <span class="card-icon"><i class="fas fa-graduation-cap"></i></span>
+                            <span class="card-number">06</span>
+                            <h3>Background</h3>
+                            <p>Education, certifications, and the details behind the work.</p>
+                            <span class="card-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                        </a>
+                        <a class="home-card" href="#summary" data-page-link="7">
+                            <span class="card-icon"><i class="fas fa-file-lines"></i></span>
+                            <span class="card-number">07</span>
+                            <h3>Professional summary</h3>
+                            <p>A concise view of my strengths, tools, and working style.</p>
+                            <span class="card-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                        </a>
+                        <a class="home-card home-card-contact" href="#contact" data-page-link="9">
+                            <span class="card-icon"><i class="fas fa-paper-plane"></i></span>
+                            <span class="card-number">08</span>
+                            <h3>Start a conversation</h3>
+                            <p>Have an idea? Let’s make it useful, clear, and memorable.</p>
+                            <span class="card-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                        </a>
+                        <a class="home-card" href="#connect" data-page-link="10">
+                            <span class="card-icon"><i class="fas fa-share-nodes"></i></span>
+                            <span class="card-number">09</span>
+                            <h3>Connect with me</h3>
+                            <p>Find me online and keep up with the work I am building.</p>
+                            <span class="card-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                        </a>
+                    </div>
+                </section>
+
                 <!-- PAGE 1: COVER -->
                 <div class="book-page cover-page" data-page="1">
                     <div class="page-content cover-content">
