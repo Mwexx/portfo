@@ -829,7 +829,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Tablet: 768px and below */
 @media (max-width: 768px) {
     :root {
-        --book-width: 100%;
+        --book-width: auto;
         --book-height: auto;
     }
     
