@@ -835,15 +835,44 @@ h1, h2, h3, h4, h5, h6 {
     
     body {
         padding: 10px;
+        align-items: flex-start;
     }
     
     .book-pages {
-        aspect-ratio: 9 / 12;
+        aspect-ratio: auto;
+        height: auto;
         max-width: 100%;
+        perspective: none;
+        transform-style: flat;
+    }
+
+    .book-page {
+        position: relative;
+        display: none;
+        min-height: 520px;
+        height: auto;
+        transform: none;
+        opacity: 1;
+        transition: none;
+        overflow: visible;
+        box-shadow: var(--book-page-shadow);
+    }
+
+    .book-page.active {
+        display: flex;
+        transform: none;
+        opacity: 1;
+    }
+
+    .book-page.prev {
+        display: none;
     }
     
     .page-content {
         padding: 40px 25px;
+        max-height: none;
+        overflow: visible;
+        flex: none;
     }
     
     .page-header h2 {
@@ -900,7 +929,11 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .book-pages {
-        aspect-ratio: 1 / 1.4;
+        min-height: 0;
+    }
+
+    .book-page {
+        min-height: 500px;
     }
     
     .page-content {
@@ -962,6 +995,11 @@ h1, h2, h3, h4, h5, h6 {
     .cover-title {
         font-size: 0.9rem;
     }
+
+    .cover-content,
+    .back-cover-content {
+        padding: 30px 15px;
+    }
     
     .back-cover-main h2 {
         font-size: 1.3rem;
@@ -969,6 +1007,18 @@ h1, h2, h3, h4, h5, h6 {
     
     .back-cover-main p {
         font-size: 0.8rem;
+    }
+
+    .contact-item-book div {
+        min-width: 0;
+    }
+
+    .contact-item-book a {
+        overflow-wrap: anywhere;
+    }
+
+    .btn {
+        max-width: 100%;
     }
 }
 
